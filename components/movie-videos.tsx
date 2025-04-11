@@ -2,9 +2,6 @@ import { API_URL } from "../app/(home)/page";
 import styles from "../styles/movie-video.module.css";
 
 async function getVideos(id: string) {
-  // console.log(`Fetching videos: ${Date.now()}`);
-  // await new Promise((resolve) => setTimeout(resolve, 1000));
-  // throw new Error("something broke...");
   const response = await fetch(`${API_URL}/${id}/videos`);
   return response.json();
 }
